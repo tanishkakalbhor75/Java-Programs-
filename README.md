@@ -1,21 +1,18 @@
 import java.util.Scanner;
 
-public class SumOfDigits {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
-        int num = sc.nextInt();
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
 
-        int sum = 0;
-        num = Math.abs(num); // Handles negative numbers
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
 
-        while (num > 0) {
-            sum = sum + (num % 10);
-            num = num / 10;
-        }
+        int sum = num1 + num2;
 
-        System.out.println("Sum of digits = " + sum);
+        System.out.println("Sum = " + sum);
 
         sc.close();
     }
