@@ -10,9 +10,9 @@ public class Main {
         System.out.print("Enter second number: ");
         int num2 = sc.nextInt();
 
-        int sum = num1 + num2;
+        int difference = num1 - num2;
 
-        System.out.println("Sum = " + sum);
+        System.out.println("Difference = " + difference);
 
         sc.close();
     }
