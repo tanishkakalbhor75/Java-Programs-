@@ -4,19 +4,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
+        System.out.print("Enter an integer: ");
         int num = sc.nextInt();
 
-        num = Math.abs(num); // Handles negative numbers
         int sum = 0;
+        num = Math.abs(num); // Converts negative numbers to positive
 
         while (num != 0) {
-            int digit = num % 10;
-            sum = sum + digit;
+            sum = sum + (num % 10);
             num = num / 10;
         }
 
-        System.out.println("Total of digits = " + sum);
+        System.out.println("Sum of digits = " + sum);
 
         sc.close();
     }
