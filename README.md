@@ -8,18 +8,21 @@ public class Main {
         int num = sc.nextInt();
 
         num = Math.abs(num); // Handles negative numbers
-        int count = 0;
+        int largest = 0;
 
         if (num == 0) {
-            count = 1;
+            largest = 0;
         } else {
             while (num != 0) {
+                int digit = num % 10;
+                if (digit > largest) {
+                    largest = digit;
+                }
                 num = num / 10;
-                count++;
             }
         }
 
-        System.out.println("Number of digits = " + count);
+        System.out.println("Largest digit = " + largest);
 
         sc.close();
     }
