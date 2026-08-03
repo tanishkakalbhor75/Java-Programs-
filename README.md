@@ -5,14 +5,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter first number: ");
-        int num1 = sc.nextInt();
+        double num1 = sc.nextDouble();
 
         System.out.print("Enter second number: ");
-        int num2 = sc.nextInt();
+        double num2 = sc.nextDouble();
 
-        int difference = num1 - num2;
-
-        System.out.println("Difference = " + difference);
+        if (num2 != 0) {
+            double result = num1 / num2;
+            System.out.println("Division = " + result);
+        } else {
+            System.out.println("Error! Division by zero is not allowed.");
+        }
 
         sc.close();
     }
