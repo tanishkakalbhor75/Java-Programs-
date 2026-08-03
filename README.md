@@ -4,15 +4,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        int num1 = sc.nextInt();
+        System.out.print("Enter an integer: ");
+        int num = sc.nextInt();
 
-        System.out.print("Enter second number: ");
-        int num2 = sc.nextInt();
+        int sum = 0;
+        num = Math.abs(num); // Handles negative numbers
 
-        int product = num1 * num2;
+        while (num > 0) {
+            sum = sum + (num % 10);
+            num = num / 10;
+        }
 
-        System.out.println("Product = " + product);
+        System.out.println("Sum of digits = " + sum);
 
         sc.close();
     }
