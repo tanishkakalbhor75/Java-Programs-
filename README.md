@@ -7,25 +7,29 @@ public class Main {
         System.out.print("Enter a number (0-1000): ");
         int num = sc.nextInt();
 
-        int original = num;
+        int temp = num;
         int sum = 0;
 
-        while (num > 0) {
-            sum += num % 10;
-            num = num / 10;
+        while (temp > 0) {
+            sum += temp % 10;
+            temp = temp / 10;
         }
 
-        String str = String.valueOf(original);
-        String encrypted = "";
+        int original = sum;
+        int reverse = 0;
 
-        for (int i = 0; i < str.length(); i++) {
-            int digit = str.charAt(i) - '0';
-            digit = (digit + sum) % 10;
-            encrypted += digit;
+        while (original > 0) {
+            reverse = reverse * 10 + (original % 10);
+            original = original / 10;
         }
 
         System.out.println("Digit Sum = " + sum);
-        System.out.println("Encrypted Number = " + encrypted);
+
+        if (sum == reverse) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
+        }
 
         sc.close();
     }
