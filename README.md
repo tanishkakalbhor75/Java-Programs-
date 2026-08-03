@@ -7,15 +7,17 @@ public class Main {
         System.out.print("Enter an integer: ");
         int num = sc.nextInt();
 
-        int sum = 0;
-        num = Math.abs(num); // Handles negative numbers
+        int original = num;
+        int reverse = 0;
 
-        while (num > 0) {
-            sum = sum + (num % 10);
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
             num = num / 10;
         }
 
-        System.out.println("Sum of digits = " + sum);
+        System.out.println("Original Number = " + original);
+        System.out.println("Reversed Number = " + reverse);
 
         sc.close();
     }
